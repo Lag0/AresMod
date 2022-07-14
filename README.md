@@ -1,0 +1,2 @@
+# AresMod
+AresMod for VRISING ARENAS SERVERS
