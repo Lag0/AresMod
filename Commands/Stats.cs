@@ -1,4 +1,5 @@
 ﻿using AresMod.Utils;
+using System.Linq;
 using Wetstone.API;
 
 namespace AresMod.Commands
@@ -22,6 +23,7 @@ namespace AresMod.Commands
             user.SendSystemMessage($"K/D: <color=#ffffffff>{pvp_kd.ToString("F")}</color>");
             user.SendSystemMessage($"Kills: <color=#75FF33FF>{pvp_kills}</color>");
             user.SendSystemMessage($"Deaths: <color=#F00000FF>{pvp_deaths}</color>");
+            //user.SendSystemMessage($"You are No. <color=#ffff00>{Database.pvpkills.Keys.ToList().IndexOf(SteamID)}</color>");
         }
     }
 }

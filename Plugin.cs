@@ -13,7 +13,7 @@ using System.Reflection;
 using Wetstone.API;
 using Wetstone.Hooks;
 
-namespace RPGMods
+namespace AresMod
 {
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
     [BepInDependency("xyz.molenzwiebel.wetstone")]
