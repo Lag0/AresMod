@@ -237,7 +237,7 @@ User designated as SuperAdmin in your server admin list will always bypass the p
 Special commands params that require admin permission can also be adjusted here.
 
 All abbreviation of the command are automatically included, you need only to put the primary command string.\
-The permissions are saved in `BepInEx/config/RPGMods/command_permission.json` and look like this:
+The permissions are saved in `BepInEx/config/AresMod/command_permission.json` and look like this:
 
 <details>
 <summary>Default Permission - Don't forget to copy!</summary>
@@ -286,7 +286,7 @@ Gives you a previously specified set of items.\
 <details>
 <summary>How does kit work?</summary>
 
-&ensp;&ensp;You will get a new config file located in `BepInEx/config/RPGMods/kits.json`
+&ensp;&ensp;You will get a new config file located in `BepInEx/config/AresMod/kits.json`
 ```json
 [
   {

@@ -32,7 +32,7 @@ namespace AresMod.Commands
 
         public static void SaveGodMode()
         {
-            File.WriteAllText("BepInEx/config/RPGMods/Saves/godmode.json", JsonSerializer.Serialize(Database.godmode, Database.JSON_options));
+            File.WriteAllText("BepInEx/config/AresMod/Saves/godmode.json", JsonSerializer.Serialize(Database.godmode, Database.JSON_options));
         }
 
         public static bool RemoveGodMode(Context ctx)
@@ -48,12 +48,12 @@ namespace AresMod.Commands
 
         public static void LoadGodMode()
         {
-            if (!File.Exists("BepInEx/config/RPGMods/Saves/godmode.json"))
+            if (!File.Exists("BepInEx/config/AresMod/Saves/godmode.json"))
             {
-                var stream = File.Create("BepInEx/config/RPGMods/Saves/godmode.json");
+                var stream = File.Create("BepInEx/config/AresMod/Saves/godmode.json");
                 stream.Dispose();
             }
-            string json = File.ReadAllText("BepInEx/config/RPGMods/Saves/godmode.json");
+            string json = File.ReadAllText("BepInEx/config/AresMod/Saves/godmode.json");
             try
             {
                 Database.godmode = JsonSerializer.Deserialize<Dictionary<ulong, bool>>(json);

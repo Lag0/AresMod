@@ -13,7 +13,7 @@ using System.Reflection;
 using Wetstone.API;
 using Wetstone.Hooks;
 
-namespace RPGMods
+namespace AresMod
 {
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
     [BepInDependency("xyz.molenzwiebel.wetstone")]
@@ -152,12 +152,12 @@ namespace RPGMods
             WeaponDecayInterval = Config.Bind("Mastery", "Decay Interval", 60, "Every amount of seconds the user is offline by the configured value will translate as 1 decay tick.");
             Offline_Weapon_MasteryDecayValue = Config.Bind("Mastery", "Decay Value", 1, "Mastery will decay by this amount for every decay tick.(1 -> 0.001%)");
 
-            if (!Directory.Exists("BepInEx/config/RPGMods")) Directory.CreateDirectory("BepInEx/config/RPGMods");
-            if (!Directory.Exists("BepInEx/config/RPGMods/Saves")) Directory.CreateDirectory("BepInEx/config/RPGMods/Saves");
+            if (!Directory.Exists("BepInEx/config/AresMod")) Directory.CreateDirectory("BepInEx/config/AresMod");
+            if (!Directory.Exists("BepInEx/config/AresMod/Saves")) Directory.CreateDirectory("BepInEx/config/AresMod/Saves");
 
-            if (!File.Exists("BepInEx/config/RPGMods/kits.json"))
+            if (!File.Exists("BepInEx/config/AresMod/kits.json"))
             {
-                var stream = File.Create("BepInEx/config/RPGMods/kits.json");
+                var stream = File.Create("BepInEx/config/AresMod/kits.json");
                 stream.Dispose();
             }
         }

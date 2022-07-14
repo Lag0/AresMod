@@ -1,0 +1,13 @@
+D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.csproj.AssemblyReference.cache
+D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\PluginInfo.cs
+D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.GeneratedMSBuildEditorConfig.editorconfig
+D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.AssemblyInfoInputs.cache
+D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.AssemblyInfo.cs
+D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.csproj.CoreCompileInputs.cache
+D:\OneDrive\Projetos\AresMod\bin\Debug\netstandard2.1\AresMod.deps.json
+D:\OneDrive\Projetos\AresMod\bin\Debug\netstandard2.1\AresMod.dll
+D:\OneDrive\Projetos\AresMod\bin\Debug\netstandard2.1\AresMod.pdb
+D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.csproj.Fody.CopyLocal.cache
+D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.csproj.Fody.RuntimeCopyLocal.cache
+D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.dll
+D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.pdb

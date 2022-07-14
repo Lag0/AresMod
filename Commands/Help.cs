@@ -78,8 +78,8 @@ namespace AresMod.Commands
 
         public static void LoadPermissions()
         {
-            if (!File.Exists("BepInEx/config/RPGMods/permissions.json")) File.Create("BepInEx/config/RPGMods/permissions.json");
-            string json = File.ReadAllText("BepInEx/config/RPGMods/permissions.json");
+            if (!File.Exists("BepInEx/config/AresMod/permissions.json")) File.Create("BepInEx/config/AresMod/permissions.json");
+            string json = File.ReadAllText("BepInEx/config/AresMod/permissions.json");
             try
             {
                 CommandHandler.Permissions = JsonSerializer.Deserialize<Dictionary<string, bool>>(json);

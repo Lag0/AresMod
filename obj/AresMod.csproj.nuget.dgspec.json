@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bruno\\source\\repos\\Lag0\\AresMod\\AresMod.csproj": {}
+    "D:\\OneDrive\\Projetos\\AresMod\\AresMod.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bruno\\source\\repos\\Lag0\\AresMod\\AresMod.csproj": {
+    "D:\\OneDrive\\Projetos\\AresMod\\AresMod.csproj": {
       "version": "0.0.1",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bruno\\source\\repos\\Lag0\\AresMod\\AresMod.csproj",
+        "projectUniqueName": "D:\\OneDrive\\Projetos\\AresMod\\AresMod.csproj",
         "projectName": "AresMod",
-        "projectPath": "C:\\Users\\bruno\\source\\repos\\Lag0\\AresMod\\AresMod.csproj",
-        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bruno\\source\\repos\\Lag0\\AresMod\\obj\\",
+        "projectPath": "D:\\OneDrive\\Projetos\\AresMod\\AresMod.csproj",
+        "packagesPath": "C:\\Users\\Masso\\.nuget\\packages\\",
+        "outputPath": "D:\\OneDrive\\Projetos\\AresMod\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bruno\\source\\repos\\Lag0\\AresMod\\NuGet.Config",
-          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "D:\\OneDrive\\Projetos\\AresMod\\NuGet.Config",
+          "C:\\Users\\Masso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -23,6 +27,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
           "https://nuget.bepinex.dev/v3/index.json": {}
         },
         "frameworks": {

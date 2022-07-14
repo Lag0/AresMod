@@ -35,7 +35,7 @@ namespace AresMod.Commands
 
         public static void SaveCooldown()
         {
-            File.WriteAllText("BepInEx/config/RPGMods/Saves/nocooldown.json", JsonSerializer.Serialize(Database.nocooldownlist, Database.JSON_options));
+            File.WriteAllText("BepInEx/config/AresMod/Saves/nocooldown.json", JsonSerializer.Serialize(Database.nocooldownlist, Database.JSON_options));
         }
 
         public static bool RemoveCooldown(Context ctx)
@@ -51,12 +51,12 @@ namespace AresMod.Commands
 
         public static void LoadNoCooldown()
         {
-            if (!File.Exists("BepInEx/config/RPGMods/Saves/nocooldown.json"))
+            if (!File.Exists("BepInEx/config/AresMod/Saves/nocooldown.json"))
             {
-                var stream = File.Create("BepInEx/config/RPGMods/Saves/nocooldown.json");
+                var stream = File.Create("BepInEx/config/AresMod/Saves/nocooldown.json");
                 stream.Dispose();
             }
-            string json = File.ReadAllText("BepInEx/config/RPGMods/Saves/nocooldown.json");
+            string json = File.ReadAllText("BepInEx/config/AresMod/Saves/nocooldown.json");
             try
             {
                 Database.nocooldownlist = JsonSerializer.Deserialize<Dictionary<ulong, bool>>(json);

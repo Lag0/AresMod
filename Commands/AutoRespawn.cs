@@ -68,7 +68,7 @@ namespace AresMod.Commands
 
         public static void SaveAutoRespawn()
         {
-            File.WriteAllText("BepInEx/config/RPGMods/Saves/autorespawn.json", JsonSerializer.Serialize(Database.autoRespawn, Database.JSON_options));
+            File.WriteAllText("BepInEx/config/AresMod/Saves/autorespawn.json", JsonSerializer.Serialize(Database.autoRespawn, Database.JSON_options));
         }
 
         public static bool RemoveAutoRespawn(ulong SteamID)
@@ -83,12 +83,12 @@ namespace AresMod.Commands
 
         public static void LoadAutoRespawn()
         {
-            if (!File.Exists("BepInEx/config/RPGMods/Saves/autorespawn.json"))
+            if (!File.Exists("BepInEx/config/AresMod/Saves/autorespawn.json"))
             {
-                var stream = File.Create("BepInEx/config/RPGMods/Saves/autorespawn.json");
+                var stream = File.Create("BepInEx/config/AresMod/Saves/autorespawn.json");
                 stream.Dispose();
             }
-            string json = File.ReadAllText("BepInEx/config/RPGMods/Saves/autorespawn.json");
+            string json = File.ReadAllText("BepInEx/config/AresMod/Saves/autorespawn.json");
             try
             {
                 Database.autoRespawn = JsonSerializer.Deserialize<Dictionary<ulong, bool>>(json);

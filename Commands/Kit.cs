@@ -43,12 +43,12 @@ namespace AresMod.Commands
 
         public static void LoadKits()
         {
-            if (!File.Exists("BepInEx/config/RPGMods/kits.json"))
+            if (!File.Exists("BepInEx/config/AresMod/kits.json"))
             {
-                var stream = File.Create("BepInEx/config/RPGMods/kits.json");
+                var stream = File.Create("BepInEx/config/AresMod/kits.json");
                 stream.Dispose();
             }
-            string json = File.ReadAllText("BepInEx/config/RPGMods/kits.json");
+            string json = File.ReadAllText("BepInEx/config/AresMod/kits.json");
             try
             {
                 kits = JsonSerializer.Deserialize<List<ItemKit>>(json);
@@ -66,7 +66,7 @@ namespace AresMod.Commands
                 WriteIndented = true,
                 IncludeFields = true
             };
-            File.WriteAllText("BepInEx/config/RPGMods/kits.json", JsonSerializer.Serialize(kits, options));
+            File.WriteAllText("BepInEx/config/AresMod/kits.json", JsonSerializer.Serialize(kits, options));
         }
     }
 }

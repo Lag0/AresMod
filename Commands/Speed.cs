@@ -34,7 +34,7 @@ namespace AresMod.Commands
 
         public static void SaveSpeed()
         {
-            File.WriteAllText("BepInEx/config/RPGMods/Saves/speeding.json", JsonSerializer.Serialize(Database.speeding, Database.JSON_options));
+            File.WriteAllText("BepInEx/config/AresMod/Saves/speeding.json", JsonSerializer.Serialize(Database.speeding, Database.JSON_options));
         }
 
         public static bool RemoveSpeed(Context ctx)
@@ -50,12 +50,12 @@ namespace AresMod.Commands
 
         public static void LoadSpeed()
         {
-            if (!File.Exists("BepInEx/config/RPGMods/Saves/speeding.json"))
+            if (!File.Exists("BepInEx/config/AresMod/Saves/speeding.json"))
             {
-                var stream = File.Create("BepInEx/config/RPGMods/Saves/speeding.json");
+                var stream = File.Create("BepInEx/config/AresMod/Saves/speeding.json");
                 stream.Dispose();
             }
-            string json = File.ReadAllText("BepInEx/config/RPGMods/Saves/speeding.json");
+            string json = File.ReadAllText("BepInEx/config/AresMod/Saves/speeding.json");
             try
             {
                 Database.speeding = JsonSerializer.Deserialize<Dictionary<ulong, bool>>(json);
