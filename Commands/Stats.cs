@@ -4,7 +4,7 @@ using Wetstone.API;
 
 namespace AresMod.Commands
 {
-    [Command("status", Usage = "status", Description = "Exibir suas estatísticas de PvP")]
+    [Command("status, stats", Usage = "status / stats", Description = "Display your personal status.")]
     public static class Stats
     {
         public static void Initialize(Context ctx)
