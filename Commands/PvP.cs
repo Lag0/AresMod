@@ -9,8 +9,8 @@ using Wetstone.API;
 
 namespace RPGMods.Commands
 {
-    [Command("pvp", Usage = "pvp [<on|off>]", Description = "Exibir líderes atuais do rank.")]
-    public static class PvP
+    [Command("leaderboard", "lb" , Usage = "leaderboard / lb", Description = "Show the current leaderboard.")]
+    public static class Leaderboard
     {
         public static void Initialize(Context ctx)
         {
