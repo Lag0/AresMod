@@ -1,9 +1,9 @@
 ﻿using ProjectM;
 using ProjectM.Network;
-using RPGMods.Utils;
+using AresMod.Utils;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("blood", Usage = "blood <Type> [<Quality>] [<Value>]", Description = "Sets your current Blood Type, Quality and Value")]
     public static class BloodSet

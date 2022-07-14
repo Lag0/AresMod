@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.2.32602.215
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPGMods", "RPGMods.csproj", "{D63120F7-44BA-44E3-B607-945646D5A96E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AresMod", "AresMod.csproj", "{7A21D9B8-CB5C-4D71-8347-01E3049BDFA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D63120F7-44BA-44E3-B607-945646D5A96E}.Debug|Any CPU.ActiveCfg = Release|Any CPU
-		{D63120F7-44BA-44E3-B607-945646D5A96E}.Debug|Any CPU.Build.0 = Release|Any CPU
-		{D63120F7-44BA-44E3-B607-945646D5A96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D63120F7-44BA-44E3-B607-945646D5A96E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A21D9B8-CB5C-4D71-8347-01E3049BDFA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A21D9B8-CB5C-4D71-8347-01E3049BDFA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A21D9B8-CB5C-4D71-8347-01E3049BDFA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A21D9B8-CB5C-4D71-8347-01E3049BDFA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9E466FE9-1255-4B25-AED9-A9503F849BED}
+		SolutionGuid = {30C9DA09-9D86-477D-A7DC-8DA340BE08AD}
 	EndGlobalSection
 EndGlobal

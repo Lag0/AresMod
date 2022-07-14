@@ -1,11 +1,11 @@
 ﻿using HarmonyLib;
 using ProjectM;
-using RPGMods.Systems;
-using RPGMods.Utils;
+using AresMod.Systems;
+using AresMod.Utils;
 using Unity.Collections;
 using Unity.Entities;
 
-namespace RPGMods.Hooks
+namespace AresMod.Hooks
 {
     [HarmonyPatch(typeof(VampireDownedServerEventSystem), nameof(VampireDownedServerEventSystem.OnUpdate))]
     public class VampireDownedServerEventSystem_Patch

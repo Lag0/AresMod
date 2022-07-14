@@ -1,12 +1,12 @@
 ﻿using ProjectM;
-using RPGMods.Utils;
+using AresMod.Utils;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using Unity.Entities;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("nocooldown, nocd", Usage = "nocooldown", Description = "Toggles instant cooldown for all abilities.")]
     public static class NoCooldown

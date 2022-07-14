@@ -1,9 +1,9 @@
 ﻿/*using ProjectM;
-using RPGMods.Utils;
+using AresMod.Utils;
 using Unity.Entities;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("inventory, i", "Inv Clear", "Limpa tudo, exceto armas e roupas equipadas do inventário.")]
     public static class InventoryClear

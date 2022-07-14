@@ -1,11 +1,11 @@
 ﻿using ProjectM;
-using RPGMods.Utils;
+using AresMod.Utils;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("speed", Usage = "speed", Description = "Toggles increased movement speed.")]
 

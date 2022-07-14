@@ -1,4 +1,4 @@
-﻿using RPGMods.Utils;
+﻿using AresMod.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text.Json;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("help, h", Usage = "help [<command>]", Description = "Mostra uma lista de comandos ou detalhes sobre um comando.", ReqPermission = 0)]
     public static class Help

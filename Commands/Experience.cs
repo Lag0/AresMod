@@ -1,10 +1,10 @@
 ﻿using ProjectM.Network;
-using RPGMods.Systems;
-using RPGMods.Utils;
+using AresMod.Systems;
+using AresMod.Utils;
 using Unity.Entities;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("experience, exp, xp", Usage = "experience [<log> <on>|<off>]", Description = "Shows your currect experience and progression to next level, or toggle the exp gain notification.")]
     public static class Experience

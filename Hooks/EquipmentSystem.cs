@@ -4,10 +4,10 @@ using Unity.Entities;
 using Unity.Collections;
 using ProjectM.Network;
 using ProjectM;
-using RPGMods.Systems;
-using RPGMods.Utils;
+using AresMod.Systems;
+using AresMod.Utils;
 
-namespace RPGMods.Hooks;
+namespace AresMod.Hooks;
 
 [HarmonyPatch(typeof(ArmorLevelSystem_Spawn), nameof(ArmorLevelSystem_Spawn.OnUpdate))]
 public class ArmorLevelSystem_Spawn_Patch

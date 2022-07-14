@@ -1,5 +1,5 @@
 ﻿using ProjectM;
-using RPGMods.Systems;
+using AresMod.Systems;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +8,7 @@ using Unity.Mathematics;
 using Unity.Transforms;
 using Wetstone.API;
 
-namespace RPGMods.Utils
+namespace AresMod.Utils
 {
     public class SquadList
     {

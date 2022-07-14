@@ -4,11 +4,11 @@ using Unity.Collections;
 using ProjectM.Network;
 using ProjectM;
 using ProjectM.Sequencer;
-using RPGMods.Utils;
-using RPGMods.Commands;
-using RPGMods.Systems;
+using AresMod.Utils;
+using AresMod.Commands;
+using AresMod.Systems;
 
-namespace RPGMods.Hooks;
+namespace AresMod.Hooks;
 [HarmonyPatch(typeof(ModifyUnitStatBuffSystem_Spawn), nameof(ModifyUnitStatBuffSystem_Spawn.OnUpdate))]
 public class ModifyUnitStatBuffSystem_Spawn_Patch
 {

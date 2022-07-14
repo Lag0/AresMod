@@ -1,7 +1,7 @@
 ﻿using ProjectM;
 using ProjectM.Network;
-using RPGMods;
-using RPGMods.Utils;
+using AresMod;
+using AresMod.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,7 +11,7 @@ using Unity.Entities;
 using Wetstone.API;
 using Wetstone.Hooks;
 
-namespace RPGMods.Systems
+namespace AresMod.Systems
 {
     public static class PermissionSystem
     {

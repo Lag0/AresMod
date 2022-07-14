@@ -1,5 +1,5 @@
-﻿using RPGMods.Systems;
-using RPGMods.Utils;
+﻿using AresMod.Systems;
+using AresMod.Utils;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,7 +8,7 @@ using Unity.Entities;
 using Unity.Transforms;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("waypoint, wp", "waypoint <Name|Set|Remove|List> [<Name>] [global]", "Teleports you to previously created waypoints.")]
     public static class Waypoint

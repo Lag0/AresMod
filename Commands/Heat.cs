@@ -1,10 +1,10 @@
 ﻿using ProjectM.Network;
-using RPGMods.Systems;
-using RPGMods.Utils;
+using AresMod.Systems;
+using AresMod.Utils;
 using Unity.Entities;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("heat", Usage = "heat", Description = "Mostra seu nivel de procurado atual.")]
     public static class Heat

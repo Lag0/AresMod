@@ -2,9 +2,9 @@
 using System.IO;
 using System.Text.Json;
 using Wetstone.API;
-using RPGMods.Utils;
+using AresMod.Utils;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("godmode, god", Usage = "godmode", Description = "Toggles god mode.")]
     public static class GodMode

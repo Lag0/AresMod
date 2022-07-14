@@ -1,11 +1,11 @@
 ﻿using ProjectM;
 using ProjectM.Network;
-using RPGMods.Utils;
+using AresMod.Utils;
 using Unity.Collections;
 using Unity.Entities;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("resetcooldown, cd", Usage = "resetcooldown [<Player Name>]", Description = "Instantly cooldown all ability & skills for the player.")]
     public static class ResetCooldown

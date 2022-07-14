@@ -6,7 +6,7 @@ using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace RPGMods.Utils
+namespace AresMod.Utils
 {
     public struct Float2
     {

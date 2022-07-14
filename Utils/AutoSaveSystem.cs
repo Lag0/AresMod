@@ -1,10 +1,10 @@
-﻿using RPGMods.Commands;
-using RPGMods.Systems;
+﻿using AresMod.Commands;
+using AresMod.Systems;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RPGMods.Utils
+namespace AresMod.Utils
 {
     public static class AutoSaveSystem
     {

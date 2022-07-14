@@ -3,12 +3,12 @@ using System.IO;
 using System.Text.Json;
 using Wetstone.API;
 using ProjectM;
-using RPGMods.Utils;
+using AresMod.Utils;
 using ProjectM.Network;
 using Unity.Entities;
 using System;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("sunimmunity, sun", Usage = "sunimmunity", Description = "Toggles sun immunity.")]
     public static class SunImmunity

@@ -1,13 +1,13 @@
 ﻿using HarmonyLib;
 using ProjectM;
 using ProjectM.Network;
-using RPGMods.Commands;
-using RPGMods.Systems;
-using RPGMods.Utils;
+using AresMod.Commands;
+using AresMod.Systems;
+using AresMod.Utils;
 using Unity.Collections;
 using Unity.Entities;
 
-namespace RPGMods.Hooks;
+namespace AresMod.Hooks;
 [HarmonyPatch]
 public class DeathEventListenerSystem_Patch
 {

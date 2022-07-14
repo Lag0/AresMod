@@ -1,12 +1,12 @@
 ﻿using ProjectM;
 using ProjectM.Network;
-using RPGMods.Utils;
+using AresMod.Utils;
 using System;
 using System.Collections.Generic;
 using Unity.Entities;
 using Wetstone.API;
 
-namespace RPGMods.Systems
+namespace AresMod.Systems
 {
     public class HunterHunted
     {

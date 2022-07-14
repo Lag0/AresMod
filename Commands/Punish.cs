@@ -1,8 +1,8 @@
 ﻿using ProjectM.Network;
-using RPGMods.Utils;
+using AresMod.Utils;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("punish", Usage = "punish <playername> [<remove>]", Description = "Manually punish someone or lift their debuff.")]
     public static class Punish

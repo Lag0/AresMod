@@ -1,9 +1,9 @@
 ﻿using ProjectM;
-using RPGMods.Utils;
+using AresMod.Utils;
 using Unity.Entities;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("bloodpotion, bp", Usage = "bloodpotion <Type> [<Quality>]", Description = "Creates a Potion with specified Blood Type, Quality and Value")]
     public static class BloodPotion

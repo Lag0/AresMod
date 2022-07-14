@@ -1,5 +1,5 @@
 ﻿using ProjectM;
-using RPGMods.Utils;
+using AresMod.Utils;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text.Json;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("kit", "kit <Name>", "Gives you a previously specified set of items.")]
     public static class Kit

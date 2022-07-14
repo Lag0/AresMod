@@ -7,9 +7,9 @@ using System.Text.Json;
 using Cpp2IL.Core.Analysis.Actions.x86.Important;
 using Unity.Entities;
 using Wetstone.API;
-using RPGMods.Utils;
+using AresMod.Utils;
 
-namespace RPGMods.Systems
+namespace AresMod.Systems
 {
     public class WeaponMasterSystem
     {

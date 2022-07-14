@@ -1,9 +1,9 @@
 ﻿using ProjectM;
 using ProjectM.Network;
-using RPGMods.Utils;
+using AresMod.Utils;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("health, hp", Usage = "health <percentage> [<player name>]", Description = "Sets your current Health")]
     public static class Health

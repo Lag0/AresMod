@@ -14,9 +14,9 @@ using Unity.Mathematics;
 using Unity.Transforms;
 using Wetstone.API;
 using System.Reflection;
-using static RPGMods.Utils.Database;
+using static AresMod.Utils.Database;
 
-namespace RPGMods.Utils
+namespace AresMod.Utils
 {
     public static class Helper
     {

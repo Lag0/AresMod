@@ -10,9 +10,9 @@ using Unity.Entities;
 using Unity.Transforms;
 using Unity.Mathematics;
 using Wetstone.API;
-using RPGMods.Utils;
+using AresMod.Utils;
 
-namespace RPGMods.Systems
+namespace AresMod.Systems
 {
     public class ExperienceSystem
     {

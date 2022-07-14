@@ -1,12 +1,12 @@
 ﻿using ProjectM;
 using ProjectM.Network;
-using RPGMods.Utils;
-using RPGMods.Systems;
+using AresMod.Utils;
+using AresMod.Systems;
 using Wetstone.API;
 using System.Linq;
 using System;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("ban", Usage = "ban <playername> <days> <reason>", Description = "Check the status of specified player, or ban them. 0 is permanent.")]
     public static class BanUser

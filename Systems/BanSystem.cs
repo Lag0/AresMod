@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using RPGMods.Utils;
+using AresMod.Utils;
 using ProjectM;
 using Unity.Entities;
 using Wetstone.API;
@@ -9,7 +9,7 @@ using ProjectM.Network;
 using System.IO;
 using System.Text.Json;
 
-namespace RPGMods.Systems
+namespace AresMod.Systems
 {
     public static class BanSystem
     {

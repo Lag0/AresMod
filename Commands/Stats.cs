@@ -1,7 +1,7 @@
-﻿using RPGMods.Utils;
+﻿using AresMod.Utils;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("status", Usage = "status", Description = "Exibir suas estatísticas de PvP")]
     public static class Stats

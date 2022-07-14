@@ -1,13 +1,13 @@
 ﻿using ProjectM.Network;
-using RPGMods.Systems;
-using RPGMods.Utils;
+using AresMod.Systems;
+using AresMod.Utils;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using Unity.Entities;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("autorespawn", Usage = "autorespawn [<PlayerName>]", Description = "Toggle auto respawn on the same position on death.")]
     public static class AutoRespawn

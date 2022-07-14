@@ -1,12 +1,12 @@
 ﻿using HarmonyLib;
 using ProjectM;
 using ProjectM.Network;
-using RPGMods.Systems;
-using RPGMods.Utils;
+using AresMod.Systems;
+using AresMod.Utils;
 using Stunlock.Network;
 using System;
 
-namespace RPGMods.Hooks
+namespace AresMod.Hooks
 {
     [HarmonyPatch(typeof(ServerBootstrapSystem), nameof(ServerBootstrapSystem.OnUserConnected))]
     public class OnUserConnected_Patch

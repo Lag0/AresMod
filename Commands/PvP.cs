@@ -1,13 +1,13 @@
 ﻿using ProjectM.Network;
-using RPGMods.Systems;
-using RPGMods.Utils;
+using AresMod.Systems;
+using AresMod.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.Entities;
 using Wetstone.API;
 
-namespace RPGMods.Commands
+namespace AresMod.Commands
 {
     [Command("leaderboard", "lb" , Usage = "leaderboard / lb", Description = "Show the current leaderboard.")]
     public static class Leaderboard
