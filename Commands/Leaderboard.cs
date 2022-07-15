@@ -13,32 +13,43 @@ namespace AresMod.Commands
         public static void Initialize(Context ctx)
         {
             var user = ctx.Event.User;
+            Dictionary<ulong, int> topKillList = PvPSystem.GetTopKillList();
 
-            List<KeyValuePair<ulong, int>> list1 = Database.pvpkills.ToList<KeyValuePair<ulong, int>>();
-            list1.Sort((Comparison<KeyValuePair<ulong, int>>)((pair1, pair2) => pair2.Value.CompareTo(pair1.Value)));
-            var kills = list1.Take<KeyValuePair<ulong, int>>(10);
-            List<KeyValuePair<ulong, double>> list2 = Database.pvpkd.ToList<KeyValuePair<ulong, double>>();
-            list2.Sort((Comparison<KeyValuePair<ulong, double>>)((pair1, pair2) => pair2.Value.CompareTo(pair1.Value)));
-            var kd = list2.Take<KeyValuePair<ulong, double>>(1);
-            
-            if (ctx.Args.Length == 0)
+            user.SendSystemMessage("==========<color=#ffffffff>TOP PvP Players</color>==========");
+            for (int index = 0; index < 10; ++index)
             {
-                if (PvPSystem.isLadderEnabled)
+                if (topKillList.Count >= index + 1)
                 {
-                    user.SendSystemMessage("==========<color=#ffffffff>TOP PvP Players</color>==========");
-                    int num4 = 0;
-                    foreach (KeyValuePair<ulong, int> keyValuePair in kills)
-                    {
-                        foreach (KeyValuePair<ulong, double> keyValuePair2 in kd)
-                        {
-                            num4++;
-                            user.SendSystemMessage(($"{num4}. <color=#ffffffff>{(object)Helper.GetNameFromSteamID(keyValuePair.Key)}:</color> <color=#75FF33FF>{keyValuePair.Value}</color> Kills・<color=#FFFFFFFF>{keyValuePair2.Value:0.0}</color> KDA"));
-                        }
-                    }
-                    if (num4 == 0) user.SendSystemMessage("<color=#ffffffff>No result.</color>");
-                    user.SendSystemMessage("===================================");
+                    KeyValuePair<ulong, int> keyValuePair = topKillList.ElementAt<KeyValuePair<ulong, int>>(index);
+                    string name = Helper.GetNameFromSteamID(keyValuePair.Key);
+                    keyValuePair = topKillList.ElementAt<KeyValuePair<ulong, int>>(index);
+                    var value = (ValueType)keyValuePair.Value;
+                    keyValuePair = topKillList.ElementAt<KeyValuePair<ulong, int>>(index);
+                    string str = PvPSystem.GetKDA(keyValuePair.Key).ToString("0.0");
+                    user.SendSystemMessage($"{index+1}. <color=#ffffff><b>{(object)name}:</b></color> <color=#75FF33FF>{(object)value}</color> Kills・<color=#ffffff>{(object)str}</color> KDA");
                 }
             }
+            user.SendSystemMessage("===================================");
+        }
+    }
+    [Command("status, stats", Usage = "status / stats", Description = "Display your personal status.")]
+    public static class Stats
+    {
+        public static void Initialize(Context ctx)
+        {
+            var user = ctx.Event.User;
+            var charName = user.CharacterName.ToString();
+            var steamID = user.PlatformId;
+
+            Database.pvpkills.TryGetValue(steamID, out var pvpKills);
+            Database.pvpdeath.TryGetValue(steamID, out var pvpDeaths);
+            Database.pvpkd.TryGetValue(steamID, out var pvpKd);
+
+            user.SendSystemMessage($"<b>-- <color=#FFFFFFFF>{charName}</color> --</b>");
+            user.SendSystemMessage($"K/D: <color=#FFFFFFFF>{pvpKd:0.0}</color>");
+            user.SendSystemMessage($"Kills: <color=#75FF33FF>{pvpKills}</color>");
+            user.SendSystemMessage($"Deaths: <color=#F00000FF>{pvpDeaths}</color>");
+            user.SendSystemMessage($"You are No. <color=#FFFFFFFF><b>{(PvPSystem.GetTopKillList().Keys.ToList<ulong>().IndexOf(ctx.Event.User.PlatformId)+ 1)}</b></color> in the leaderboard!");
         }
     }
 }

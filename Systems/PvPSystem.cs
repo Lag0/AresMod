@@ -4,6 +4,7 @@ using AresMod.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
 using Unity.Entities;
 using Wetstone.API;
@@ -108,8 +109,27 @@ namespace AresMod.Systems
             //-- Announce Kills
             if (announce_kills) ServerChatUtils.SendSystemMessageToAllClients(em, $"Vampire \"{killer_name}\" has killed \"{victim_name}\"!");
         }
-
-        public static void UpdateKD(ulong killer_id, ulong victim_id)
+        
+        public static Dictionary<ulong, int> Kills = Database.pvpkills;
+        public static Dictionary<ulong, int> Deaths = Database.pvpdeath;
+        public static Dictionary<ulong, int> GetTopKillList() => Database.pvpkills
+            .OrderBy<KeyValuePair<ulong, int>, int>((Func<KeyValuePair<ulong, int>, int>)(x => x.Value))
+            .Reverse<KeyValuePair<ulong, int>>().ToDictionary<KeyValuePair<ulong, int>, ulong, int>(
+                (Func<KeyValuePair<ulong, int>, ulong>)(x => x.Key), 
+                (Func<KeyValuePair<ulong, int>, int>)(x => x.Value));
+        public static double GetKDA(ulong killer_id)
+        {
+            Kills = Database.pvpkills;
+            Deaths = Database.pvpdeath;
+            double num1 = 0.0;
+            double num2 = 0.0;
+            if (Kills.ContainsKey(killer_id))
+                num1 = (double) Kills[killer_id];
+            if (Deaths.ContainsKey(killer_id))
+                num2 = (double) Deaths[killer_id];
+            return num2 == 0.0 ? num1 : num1 / num2;
+        }
+        private static void UpdateKD(ulong killer_id, ulong victim_id)
         {
             var isExist = Database.pvpdeath.TryGetValue(killer_id, out _);
             if (!isExist) Database.pvpdeath[killer_id] = 0;
