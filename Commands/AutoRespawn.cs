@@ -17,7 +17,7 @@ namespace AresMod.Commands
             var entityManager = ctx.EntityManager;
             ulong SteamID = ctx.Event.User.PlatformId;
             string PlayerName = ctx.Event.User.CharacterName.ToString();
-            bool isServerWide = false;
+            bool isServerWide = true;
 
             bool isAllowed = ctx.Event.User.IsAdmin || PermissionSystem.PermissionCheck(ctx.Event.User.PlatformId, "autorespawn_args");
             if (ctx.Args.Length > 0 && isAllowed)

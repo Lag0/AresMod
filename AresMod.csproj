@@ -8,7 +8,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>preview</LangVersion>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-    <UnhollowedDllPath>D:\Program Files (x86)\Steam\steamapps\common\VRisingDedicatedServer\BepInEx\unhollowed</UnhollowedDllPath>
+    <UnhollowedDllPath>H:\Programas\Steam\steamapps\common\VRisingDedicatedServer\BepInEx\unhollowed</UnhollowedDllPath>
     <NoWarn>$(NoWarn);NU5104</NoWarn>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
   </PropertyGroup>
@@ -602,5 +602,15 @@
   <ItemGroup>
     <Compile Remove="Hooks\EquipmentSystem.cs" />
     <Compile Remove="Utils\SquadList.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Utils\Ranking.cs" />
+    <Compile Remove="Commands\Mastery.cs" />
+    <Compile Remove="Systems\ExperienceSystem.cs" />
+    <Compile Remove="Systems\HunterHunted.cs" />
+    <Compile Remove="Systems\WeaponMasterSystem.cs" />
+    <Compile Remove="Systems\SiegeSystem.cs" />
+    <Compile Remove="Commands\Give.cs" />
   </ItemGroup>
 </Project>
