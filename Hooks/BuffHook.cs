@@ -178,9 +178,7 @@ public class ModifyUnitStatBuffSystem_Spawn_Patch
                 var Buffer = entityManager.GetBuffer<ModifyUnitStatBuff_DOTS>(entity);
 
                 Buffer.Clear();
-
-                if (WeaponMasterSystem.isMasteryEnabled) WeaponMasterSystem.BuffReceiver(Buffer, Owner, Data.PlatformId);
-
+                
                 if (Database.nocooldownlist.TryGetValue(Data.PlatformId, out bool b))
                 {
                     Buffer.Add(Cooldown);
@@ -227,7 +225,7 @@ public class BuffSystem_Spawn_Server_Patch
     {
         if (__instance.__OnUpdate_LambdaJob0_entityQuery == null) return;
 
-        if (PvPSystem.isPunishEnabled || SiegeSystem.isSiegeBuff || PermissionSystem.isVIPSystem)
+        if (PvPSystem.isPunishEnabled || PermissionSystem.isVIPSystem)
         {
             NativeArray<Entity> entities = __instance.__OnUpdate_LambdaJob0_entityQuery.ToEntityArray(Allocator.Temp);
             foreach (var entity in entities)
@@ -236,30 +234,12 @@ public class BuffSystem_Spawn_Server_Patch
                 //if (WeaponMasterSystem.isMasteryEnabled) WeaponMasterSystem.BuffReceiver(entity, GUID);
                 if (PermissionSystem.isVIPSystem) PermissionSystem.BuffReceiver(entity, GUID);
                 if (PvPSystem.isPunishEnabled) PvPSystem.BuffReceiver(entity, GUID);
-                if (SiegeSystem.isSiegeBuff) SiegeSystem.BuffReceiver(entity, GUID);
+                
             }
         }
     }
 
-    private static void Postfix(BuffSystem_Spawn_Server __instance)
-    {
-        if (__instance.__OnUpdate_LambdaJob0_entityQuery == null) return;
 
-        if (HunterHunted.isActive || WeaponMasterSystem.isMasteryEnabled)
-        {
-            NativeArray<Entity> entities = __instance.__OnUpdate_LambdaJob0_entityQuery.ToEntityArray(Allocator.Temp);
-            foreach (var entity in entities)
-            {
-                if (!__instance.EntityManager.HasComponent<InCombatBuff>(entity)) continue;
-                Entity e_Owner = __instance.EntityManager.GetComponentData<EntityOwner>(entity).Owner;
-                if (!__instance.EntityManager.HasComponent<PlayerCharacter>(e_Owner)) continue;
-                Entity e_User = __instance.EntityManager.GetComponentData<PlayerCharacter>(e_Owner).UserEntity._Entity;
-
-                if (HunterHunted.isActive) HunterHunted.HeatManager(e_User, e_Owner, true);
-                if (WeaponMasterSystem.isMasteryEnabled) WeaponMasterSystem.LoopMastery(e_User, e_Owner);
-            }
-        }
-    }
 }
 
 [HarmonyPatch(typeof(ModifyBloodDrainSystem_Spawn), nameof(ModifyBloodDrainSystem_Spawn.OnUpdate))]

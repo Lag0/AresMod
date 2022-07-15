@@ -38,14 +38,9 @@ namespace AresMod.Hooks
                     PvPSystem.Monitor(Killer, Victim);
                     if (PvPSystem.isPunishEnabled) PvPSystem.PunishCheck(Killer, Victim);
                 }
-                //-- ------------------------
+                
 
-                //-- Reduce EXP on Death by Mob/Suicide
-                if (em.HasComponent<PlayerCharacter>(Victim) && (!em.HasComponent<PlayerCharacter>(Killer) || Killer.Equals(Victim)))
-                {
-                    if (ExperienceSystem.isEXPActive) ExperienceSystem.LoseEXP(Victim);
-                }
-                //-- ----------------------------------
+                
             }
         }
     }

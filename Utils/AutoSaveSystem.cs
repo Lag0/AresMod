@@ -16,14 +16,11 @@ namespace AresMod.Utils
             Waypoint.SaveWaypoints();
             NoCooldown.SaveCooldown();
             GodMode.SaveGodMode();
-            Speed.SaveSpeed();
             AutoRespawn.SaveAutoRespawn();
             //Kit.SaveKits();   //-- Nothing to save here for now.
 
             //-- System Related
-            ExperienceSystem.SaveEXPData();
             PvPSystem.SavePvPStat();
-            WeaponMasterSystem.SaveWeaponMastery();
             BanSystem.SaveBanList();
 
             Plugin.Logger.LogInfo("All database saved to JSON file.");
@@ -37,14 +34,11 @@ namespace AresMod.Utils
             Waypoint.LoadWaypoints();
             NoCooldown.LoadNoCooldown();
             GodMode.LoadGodMode();
-            Speed.LoadSpeed();
             AutoRespawn.LoadAutoRespawn();
             Kit.LoadKits();
 
             //-- System Related
-            PvPSystem.LoadPvPStat();
-            ExperienceSystem.LoadEXPData();
-            WeaponMasterSystem.LoadWeaponMastery();
+            PvPSystem.LoadPvPStat(); ;
             BanSystem.LoadBanList();
 
             Plugin.Logger.LogInfo("All database is now loaded.");

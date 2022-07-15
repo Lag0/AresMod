@@ -22,13 +22,7 @@ namespace AresMod.Hooks
                 var userData = __instance.EntityManager.GetComponentData<User>(userEntity);
                 bool isNewVampire = userData.CharacterName.IsEmpty;
 
-                if (!isNewVampire)
-                {
-                    if (WeaponMasterSystem.isDecaySystemEnabled && WeaponMasterSystem.isMasteryEnabled)
-                    {
-                        WeaponMasterSystem.DecayMastery(userEntity);
-                    }
-                }
+                
             }
             catch { }
         }
@@ -67,13 +61,7 @@ namespace AresMod.Hooks
                     var userData = __instance.EntityManager.GetComponentData<User>(serverClient.UserEntity);
                     bool isNewVampire = userData.CharacterName.IsEmpty;
 
-                    if (!isNewVampire)
-                    {
-                        if (WeaponMasterSystem.isDecaySystemEnabled)
-                        {
-                            Database.player_decaymastery_logout[userData.PlatformId] = DateTime.Now;
-                        }
-                    }
+                    
                 }
                 catch { };
             }

@@ -7,7 +7,8 @@ using Wetstone.API;
 
 namespace AresMod.Commands
 {
-    [Command("leaderboard, lb, pvp", Usage = "leaderboard / lb / pvp", Description = "Show the current leaderboard ranking.", ReqPermission = 0)]
+    [Command("leaderboard, lb, pvp", Usage = "leaderboard / lb / pvp",
+        Description = "Show the current leaderboard ranking.", ReqPermission = 0)]
     public static class Leaderboard
     {
         public static void Initialize(Context ctx)
@@ -26,12 +27,15 @@ namespace AresMod.Commands
                     var value = (ValueType)keyValuePair.Value;
                     keyValuePair = topKillList.ElementAt<KeyValuePair<ulong, int>>(index);
                     string str = PvPSystem.GetKDA(keyValuePair.Key).ToString("0.0");
-                    user.SendSystemMessage($"{index+1}. <color=#ffffff><b>{(object)name}:</b></color> <color=#75FF33FF>{(object)value}</color> Kills・<color=#ffffff>{(object)str}</color> KDA");
+                    user.SendSystemMessage(
+                        $"{index + 1}. <color=#ffffff><b>{(object)name}:</b></color> <color=#75FF33FF>{(object)value}</color> Kills・<color=#ffffff>{(object)str}</color> KDA");
                 }
             }
+
             user.SendSystemMessage("===================================");
         }
     }
+
     [Command("status, stats", Usage = "status / stats", Description = "Display your personal status.")]
     public static class Stats
     {
@@ -49,7 +53,8 @@ namespace AresMod.Commands
             user.SendSystemMessage($"K/D: <color=#FFFFFFFF>{pvpKd:0.0}</color>");
             user.SendSystemMessage($"Kills: <color=#75FF33FF>{pvpKills}</color>");
             user.SendSystemMessage($"Deaths: <color=#F00000FF>{pvpDeaths}</color>");
-            user.SendSystemMessage($"You are No. <color=#FFFFFFFF><b>{(PvPSystem.GetTopKillList().Keys.ToList<ulong>().IndexOf(ctx.Event.User.PlatformId)+ 1)}</b></color> in the leaderboard!");
+            user.SendSystemMessage(
+                $"You are No. <color=#FFFFFFFF><b>{(PvPSystem.GetTopKillList().Keys.ToList<ulong>().IndexOf(ctx.Event.User.PlatformId) + 1)}</b></color> in the leaderboard!");
         }
     }
 }

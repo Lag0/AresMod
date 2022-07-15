@@ -598,4 +598,9 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Hooks\EquipmentSystem.cs" />
+    <Compile Remove="Utils\SquadList.cs" />
+  </ItemGroup>
 </Project>
