@@ -8,9 +8,25 @@ using Wetstone.API;
 namespace AresMod.Commands
 {
     [Command("ready, r", Usage = "ready [<Player Name>]", Description = "Set your status ready for pvp")]
-    public static class ResetCooldown
+    public static class Ready
     {
+        private static EntityManager entityManager = VWorld.Server.EntityManager;
         public static bool status_ready = true;
+
+        public static void BuffReceiver(Entity buffEntity)
+        {
+            PrefabGUID GUID = entityManager.GetComponentData<PrefabGUID>(buffEntity);
+            if (GUID.Equals(Database.buff.LevelUp_Buff))
+            {
+                Entity Owner = entityManager.GetComponentData<EntityOwner>(buffEntity).Owner;
+                if (entityManager.HasComponent<PlayerCharacter>(Owner))
+                {
+                    LifeTime lifetime = entityManager.GetComponentData<LifeTime>(buffEntity);
+                    lifetime.Duration = 0.0001f;
+                    entityManager.SetComponentData(buffEntity, lifetime);
+                }
+            }
+        }
         public static void Initialize(Context ctx)
         {
             Entity PlayerCharacter = ctx.Event.SenderCharacterEntity;
@@ -61,6 +77,7 @@ namespace AresMod.Commands
             VWorld.Server.GetExistingSystem<DebugEventsSystem>().ChangeHealthEvent(UserIndex, ref HealthEvent);
             }
             if (status_ready) ServerChatUtils.SendSystemMessageToAllClients(entityManager, $"Player \"{CharName}\" is ready!.");
+
         }
     }
 }
