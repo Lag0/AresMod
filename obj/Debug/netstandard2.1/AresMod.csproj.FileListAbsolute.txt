@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.csproj.AssemblyReference.cache
 D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\PluginInfo.cs
 D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.GeneratedMSBuildEditorConfig.editorconfig
@@ -11,3 +12,18 @@ D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.csproj.Fody.CopyLo
 D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.csproj.Fody.RuntimeCopyLocal.cache
 D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.dll
 D:\OneDrive\Projetos\AresMod\obj\Debug\netstandard2.1\AresMod.pdb
+=======
+C:\Users\bruno\source\repos\Lag0\AresMod\obj\Debug\netstandard2.1\AresMod.csproj.AssemblyReference.cache
+C:\Users\bruno\source\repos\Lag0\AresMod\obj\Debug\netstandard2.1\PluginInfo.cs
+C:\Users\bruno\source\repos\Lag0\AresMod\obj\Debug\netstandard2.1\AresMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bruno\source\repos\Lag0\AresMod\obj\Debug\netstandard2.1\AresMod.AssemblyInfoInputs.cache
+C:\Users\bruno\source\repos\Lag0\AresMod\obj\Debug\netstandard2.1\AresMod.AssemblyInfo.cs
+C:\Users\bruno\source\repos\Lag0\AresMod\obj\Debug\netstandard2.1\AresMod.csproj.CoreCompileInputs.cache
+C:\Users\bruno\source\repos\Lag0\AresMod\bin\Debug\netstandard2.1\AresMod.deps.json
+C:\Users\bruno\source\repos\Lag0\AresMod\bin\Debug\netstandard2.1\AresMod.dll
+C:\Users\bruno\source\repos\Lag0\AresMod\bin\Debug\netstandard2.1\AresMod.pdb
+C:\Users\bruno\source\repos\Lag0\AresMod\obj\Debug\netstandard2.1\AresMod.csproj.Fody.CopyLocal.cache
+C:\Users\bruno\source\repos\Lag0\AresMod\obj\Debug\netstandard2.1\AresMod.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\bruno\source\repos\Lag0\AresMod\obj\Debug\netstandard2.1\AresMod.dll
+C:\Users\bruno\source\repos\Lag0\AresMod\obj\Debug\netstandard2.1\AresMod.pdb
+>>>>>>> b159755f58102cdac534327b1df5e8de2d9c1f75
