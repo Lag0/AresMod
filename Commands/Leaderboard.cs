@@ -16,10 +16,10 @@ namespace AresMod.Commands
 
             List<KeyValuePair<ulong, int>> list1 = Database.pvpkills.ToList<KeyValuePair<ulong, int>>();
             list1.Sort((Comparison<KeyValuePair<ulong, int>>)((pair1, pair2) => pair2.Value.CompareTo(pair1.Value)));
-            var kills = list1.Take<KeyValuePair<ulong, int>>(5);
+            var kills = list1.Take<KeyValuePair<ulong, int>>(10);
             List<KeyValuePair<ulong, double>> list2 = Database.pvpkd.ToList<KeyValuePair<ulong, double>>();
             list2.Sort((Comparison<KeyValuePair<ulong, double>>)((pair1, pair2) => pair2.Value.CompareTo(pair1.Value)));
-            var kd = list2.Take<KeyValuePair<ulong, double>>(2);
+            var kd = list2.Take<KeyValuePair<ulong, double>>(1);
             
             if (ctx.Args.Length == 0)
             {
@@ -32,7 +32,7 @@ namespace AresMod.Commands
                         foreach (KeyValuePair<ulong, double> keyValuePair2 in kd)
                         {
                             num4++;
-                            user.SendSystemMessage(($"{num4}. <color=#ffffffff>{(object)Helper.GetNameFromSteamID(keyValuePair.Key)}:</color> <color=#75FF33FF>{keyValuePair.Value}</color> Kills・<color=#FFFFFFFF>{keyValuePair2.Value.ToString("0.0")}</color> KDA"));
+                            user.SendSystemMessage(($"{num4}. <color=#ffffffff>{(object)Helper.GetNameFromSteamID(keyValuePair.Key)}:</color> <color=#75FF33FF>{keyValuePair.Value}</color> Kills・<color=#FFFFFFFF>{keyValuePair2.Value:0.0}</color> KDA"));
                         }
                     }
                     if (num4 == 0) user.SendSystemMessage("<color=#ffffffff>No result.</color>");
