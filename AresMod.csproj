@@ -611,6 +611,5 @@
     <Compile Remove="Systems\HunterHunted.cs" />
     <Compile Remove="Systems\WeaponMasterSystem.cs" />
     <Compile Remove="Systems\SiegeSystem.cs" />
-    <Compile Remove="Commands\Give.cs" />
   </ItemGroup>
 </Project>

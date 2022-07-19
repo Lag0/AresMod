@@ -105,9 +105,9 @@ namespace AresMod.Systems
 
             //-- Update K/D
             UpdateKD(killer_id, victim_id);
-
+            
             //-- Announce Kills
-            if (announce_kills) ServerChatUtils.SendSystemMessageToAllClients(em, $"Vampire \"{killer_name}\" has killed \"{victim_name}\"!");
+            if (announce_kills) ServerChatUtils.SendSystemMessageToAllClients(em, $"<color=#47ff18>{killer_name}</color> killed <color=#ff003e>{victim_name}</color>!");
         }
         
         public static Dictionary<ulong, int> Kills = Database.pvpkills;
