@@ -475,12 +475,10 @@ namespace AresMod.Utils
             //[1258181143]		    AB_Undead_Priest_Elite_RaiseHorde_Minion_Buff
             //[1502566434]		    AB_Manticore_Flame_Buff_UNUSED
             //[-1133938228]		    AB_Town_Priest_HealBomb_Buff        //-- Good Heal Effect
-            //[-225445080]          AB_Nun_AoE_ApplyLight_Buff          //-- Low Healing Effect
+            public static PrefabGUID AB_Nun_AoE_ApplyLight_Buff  = new PrefabGUID(-225445080);
             //[-2115732274]		    AB_Manticore_Flying_Buff
 
-            //[-474441982]		    Buff_General_Teleport_Travel        //-- Usefull for imprissoning someone?
-
-
+            public static PrefabGUID Buff_General_Teleport_Travel  = new PrefabGUID(-474441982);
         }
     }
 }

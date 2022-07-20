@@ -21,8 +21,6 @@ namespace AresMod.Hooks
                 var userEntity = serverClient.UserEntity;
                 var userData = __instance.EntityManager.GetComponentData<User>(userEntity);
                 bool isNewVampire = userData.CharacterName.IsEmpty;
-
-                
             }
             catch { }
         }

@@ -5,7 +5,7 @@ using Wetstone.API;
 
 namespace AresMod.Commands
 {
-    [Command("kick", Usage = "kick <playername>", Description = "Kick the specified player out of the server.")]
+    [Command("kick", Usage = "kick <playername>", Description = "Kick the specified player out of the server.", ReqPermission = 100)]
     public static class Kick
     {
         public static void Initialize(Context ctx)

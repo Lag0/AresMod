@@ -49,6 +49,7 @@ namespace AresMod.Commands
             VWorld.Server.GetExistingSystem<DebugEventsSystem>().ChangeHealthEvent(UserIndex, ref HealthEvent);
 
             ctx.Event.User.SendSystemMessage($"Player \"{PlayerName}\" Health set to <color=#ffff00ff>{Value}%</color>");
+            Helper.ApplyBuff(ctx.Event.SenderUserEntity, ctx.Event.SenderCharacterEntity, Database.buff.AB_Nun_AoE_ApplyLight_Buff);
         }
     }
 }

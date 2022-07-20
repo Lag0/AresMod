@@ -32,7 +32,7 @@ namespace AresMod.Commands
                 }
             }
 
-            user.SendSystemMessage("===================================");
+            user.SendSystemMessage("==================================");
         }
     }
 
